@@ -11,13 +11,21 @@ const displayRating = function () {
 	displayNumber.textContent = `You selected ${id} out of ${ratingBtn.length}`;
 };
 
-const changeSite = function () {
+const previousWindow = function (event) {
+	if (event.target == event.currentTarget) {
+		firstWindow.style.display = "block";
+		secondWindow.style.display = "none";
+	}
+};
+
+const nextWindow = function (event) {
 	if (!submitBtn.classList.contains("popup_button--active")) {
-		alert("Please rate!");
+		alert("Select a button!");
 	} else {
 		firstWindow.style.display = "none";
 		secondWindow.style.display = "block";
 		displayRating(id);
+		document.body.addEventListener("click", previousWindow);
 	}
 };
 
@@ -50,4 +58,4 @@ popupRatings.addEventListener("click", function (event) {
 
 submitBtn.addEventListener("mouseover", mouseOver);
 submitBtn.addEventListener("mouseout", mouseOut);
-submitBtn.addEventListener("click", changeSite);
+submitBtn.addEventListener("click", nextWindow);

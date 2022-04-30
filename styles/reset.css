@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--orange: hsl(25, 97%, 53%);
+	--white: hsl(0, 0%, 100%);
+	--lightgrey: hsl(217, 12%, 63%);
+	--mediumgrey: hsl(216, 12%, 54%);
+	--darkblue: hsl(213, 19%, 18%);
+	--verydarkblue: hsl(216, 12%, 8%);
+	font-size: 15px;
+	font-family: "Overpass", sans-serif;
+}
+
+h1 {
+	color: var(--white);
+}
